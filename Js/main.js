@@ -12,7 +12,7 @@ search_input.addEventListener('input',function(input){
 
 
 async function search(input) {
-    var t= await fetch(`http://api.weatherapi.com/v1/forecast.json?key=937f15a884d746f4b70175301241512&q=${input}&days=3`)
+    var t= await fetch(`https://api.weatherapi.com/v1/forecast.json?key=937f15a884d746f4b70175301241512&q=${input}&days=3`)
     var reponse= await t.json()
     displayToday(reponse)
     displayOther(reponse)
