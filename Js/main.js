@@ -1,8 +1,8 @@
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-// var findBtn=document.getElementById('findBtn')
+
 var search_input=document.getElementById('search')
-// console.log(search);
+
 
 
 search_input.addEventListener('input',function(input){
@@ -18,15 +18,13 @@ async function search(input) {
     displayOther(reponse)
 }
 
-search()
-
 
 function displayToday(reponse){
     var date=new Date(reponse.current.last_updated)
     console.log(days[date.getDay()]);
     
 
-    var today=`     <div class="weather-today col-sm-12 col-lg-4">
+    var today=`     <div class="weather-today col-12 col-lg-4">
                         <div class="weather-header">
                             <div class="day">${days[date.getDay()]}</div>
                             <div class="date">16December</div>
@@ -55,7 +53,7 @@ function displayOther(reponse){
     var third_Day=new Date(reponse.forecast.forecastday[2].date)
 
     var other=''
-    other+=`     <div class="weather-tomorrow text-center col-sm-12 col-lg-4">
+    other+=`     <div class="weather-tomorrow text-center col-12 col-lg-4">
                         <div class="weather-header">
                             <div class="day">${days[sec_Day.getDay()]}</div>
                         </div>
@@ -72,7 +70,7 @@ function displayOther(reponse){
                         </div>
                     </div>
 
-                    <div class="weather-tomorrow after text-center col-sm-12 col-lg-4">
+                    <div class="weather-tomorrow after text-center col-12 col-lg-4">
                         <div class="weather-header">
                             <div class="day">${days[third_Day.getDay()]}</div>
                         </div>
