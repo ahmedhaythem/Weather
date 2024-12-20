@@ -21,13 +21,14 @@ async function search(input) {
 
 function displayToday(reponse){
     var date=new Date(reponse.current.last_updated)
-    console.log(days[date.getDay()]);
+    console.log(date.getDate());
+    console.log(monthNames[date.getMonth()]);
     
 
     var today=`     <div class="weather-today col-12 col-lg-4">
                         <div class="weather-header">
                             <div class="day">${days[date.getDay()]}</div>
-                            <div class="date">16December</div>
+                            <div class="date">${date.getDate()}${monthNames[date.getMonth()]}</div>
                         </div>
                         <div class="weather-body">
                             <div class="location">${reponse.location.name}</div>
